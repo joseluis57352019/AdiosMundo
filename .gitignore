@@ -1,0 +1,7 @@
+#Fichero para ignorar archivos
+
+#Copias de seguridad
+*.bak
+
+#Clases compiladas
+*.class
