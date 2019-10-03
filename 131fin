@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class P131LlenandoPiscinas {
+
+	public static void main(String[] args) {
+		
+		float a, b, c, d, ytotal, ybarr, yperdida, vtotal, vbarr, vperdida, ya, va;
+		int y, v;
+		double e, j;
+		Scanner teclado = new Scanner(System.in);
+
+		do {
+			
+		ytotal = teclado.nextInt();
+		ybarr = teclado.nextInt();
+		yperdida = teclado.nextInt();
+		vtotal = teclado.nextInt();
+		vbarr = teclado.nextInt();
+		vperdida = teclado.nextInt();
+		
+		if(ytotal!=0 && vtotal!=0 ) {
+		y=0;
+		v=0;		
+
+			if (ytotal>ybarr) {
+				a = ytotal-ybarr;
+				ya = ybarr-yperdida;
+				y= (int) (a/ya); 
+				if(a%ya==0) {
+					y=y+1;}
+				else {
+					y=y+2;}
+				}
+		
+			else {
+				y=1;}
+		
+			if(vtotal>vbarr) {
+				b=vtotal-vbarr;
+				va= vbarr-vperdida;
+				v= (int) (b/va);
+				if(b%va==0) {
+					v=v+1;}			
+				else {v=v+2;} }
+		
+		else {
+			v=1;}
+			
+		if(y<0) {y=v+1;}
+		if(v<0) {v=y+1;}
+		
+	//	System.out.println("prueba :" + y + " - "+v);
+	//	e=Math.floor(y);
+	//	j=Math.floor(v);
+		System.out.println(y);
+		System.out.println(v);
+		if(y<v) {
+			System.out.println("YO "+y);
+		}
+		else if(v<y) {
+			System.out.println("VECINO "+v);
+		}
+		else {
+			System.out.println("EMPATE "+y);
+		}
+		
+		}else break;
+		}while (ytotal!=0 && vtotal!=0 );
+	}
+
+}
