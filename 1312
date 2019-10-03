@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class P131_LlenandoPiscinas2 {
+
+	public static void main(String[] args) {
+		
+		float a, b, c, d, yt, yl, yv, vt, vl, vv;
+		int y, v;
+		double e, j;
+		Scanner teclado = new Scanner(System.in);
+
+		do {
+			
+		yt = teclado.nextInt();
+		yl = teclado.nextInt();
+		yv = teclado.nextInt();
+		vt = teclado.nextInt();
+		vl = teclado.nextInt();
+		vv = teclado.nextInt();
+		if(yt!=0 && vt!=0 ) {
+		y=0;
+		v=0;		
+
+		if (yt>yl) {
+			a = yt-yl;
+			y= (int) (a/(yl-yv)); 
+			y=y+2;}
+		else {
+			y=1;}
+		
+		if(vt>vl) {
+			b=vt-vl;
+			v= (int) (b/(vl-vv));
+			v=v+2;
+		}
+		else {
+			v=1;}
+		
+		
+		System.out.println("prueba :" + y + " - "+v);
+		e=Math.floor(y);
+		j=Math.floor(v);
+		
+		if(e>j) {
+			System.out.printf("YO %.0f\n",e);
+		}
+		else if(e>j) {
+			System.out.printf("VECINO %.0f\n",j);
+		}
+		else {
+			System.out.printf("EMPATE %.0f\n",e);
+			}
+		
+		}else break;
+		}while (yt!=0 && vt!=0 );
+	}
+
+}
